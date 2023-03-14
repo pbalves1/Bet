@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom mb-4">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+     <ul class="navbar-nav">
+      <div class="text-center">
+         <img height="40" src="./assets/images/logo_preto.png">
+       </div>
+        <li class="nav-item nav-item-active ">
+           <a class="nav-link nav-link-custom" href="/bookies">
+              <mat-icon>home</mat-icon>
+              Site de Análise
+           </a>
+        </li>
+        <li class="nav-item  ">
+           <a class="nav-link nav-link-custom" href="/renewal/">
+              <mat-icon>payment</mat-icon>
+              Renovação
+           </a>
+        </li>
+        <li class="nav-item  ">
+           <a class="nav-link nav-link-custom" href="https://t.me/betanalyticsbr">
+              <mat-icon>send</mat-icon>
+              Telegram
+           </a>
+        </li>
+        <li class="nav-item  ">
+           <a class="nav-link nav-link-custom" href="/logout">
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+           </a>
+        </li>
+     </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row justify-content-center" style="margin-top:90px;">
+     <div class="col-md-6">
+        <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+           <div class="card-body">
+              <div class="row">
+                 <div class="col mb-4">
+                    <h5><b>Escolha a casa de apostas abaixo:</b></h5>
+                 </div>
+              </div>
+              <div class="row justify-content-between px-3 text-center a">
+                 <!--<div class="col-auto mr-sm-2 mx-1 card-block py-0 text-center selected ">
+                    <div class="flex-row">
+                       <div class="col" (click)="setBookie('bet365')">
+                          <a><img class="img-fluid" src="./assets/images/bet365.png" width="100" height="100"></a>
+                          <p>Bet365</p>
+                       </div>
+                    </div>
+                 </div>-->
+                 <div class="col-auto ml-sm-2 mx-1 card-block py-0 text-center">
+                    <div class="flex-row">
+                       <div class="col" (click)="setBookie('betano')">
+                          <a><img class="img-fluid" src="./assets/images/betano.png" width="100" height="100"></a>
+                          <p>Betano</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>

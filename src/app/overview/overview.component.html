@@ -1,0 +1,303 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom mb-4">
+   
+   <!--<a class="plain-a" href="overview/betano/copa"><img class="uhover" [ngClass]="{'uselected':season == 'copa'}" src="../../assets/icons/world.svg" width="48"></a>
+   <a class="plain-a" href="overview/betano/premier" ><img class="uhover" [ngClass]="{'uselected':season == 'premier'}" src="../../assets/icons/premier.svg" width="48"></a>
+   -->
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+         <!--<li class="nav-item">
+            <a class="nav-link nav-link-custom" href="home?bookie=betano&season=bet365">
+               <mat-icon >home</mat-icon>
+               Início
+            </a>
+         </li>-->
+         <div class="text-center">
+            <img height="40" src="./assets/images/logo_preto.png">
+          </div>
+         <li class="nav-item ">
+            <a class="nav-link nav-link-custom nav-item-active" href="overview/betano/{{season}}">
+               <mat-icon>fast_rewind</mat-icon>
+               Últ. Jogos
+            </a>
+         </li>
+         <li class="nav-item ">
+            <a class="nav-link nav-link-custom" href="nextgames/betano/{{season}}">
+               <mat-icon>fast_forward</mat-icon>
+               Próx. Jogos
+            </a>
+         </li>
+         <li class="nav-item ">
+            <a class="nav-link nav-link-custom" href="horario/betano/{{season}}">
+               <mat-icon>access_time</mat-icon>
+               Horários
+            </a>
+         </li>
+         <!--<li class="nav-item dropdown ">
+            <a class="nav-link nav-link-custom dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" href="https://www.mentorwesleyandrade.com.br/home/world/bet365#">
+            <i class="nav-link-icon fa fa-robot "></i> Sinais
+            </a>
+            <div class="dropdown-menu dropdown-menu-custom">
+            <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/1">Over 1.5</a>
+            <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/3">Over 2.5</a>
+            <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/2">Vencedor do Jogo</a>
+            <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/4">Ambas Marcam</a>
+            </div>
+            </li>-->
+         <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" >
+               <mat-icon>perm_identity</mat-icon>
+               Conta
+            </a>
+            <div class="dropdown-menu dropdown-menu-custom">
+               <a class="dropdown-item dropdown-item-custom" href="https://t.me/betanalyticsbr">
+                  <mat-icon>send</mat-icon>
+                  Telegram
+               </a>
+               <a class="dropdown-item dropdown-item-custom" href="renewal">
+                  <mat-icon> money</mat-icon>
+                  Renovação
+               </a>
+               <a class="dropdown-item dropdown-item-custom">
+                  <mat-icon> attach_money</mat-icon>
+                  Venc. {{dataVencimento | date: 'dd/MM/yyyy'}}
+               </a>
+               <a class="dropdown-item dropdown-item-custom" href="logout">
+                  <mat-icon>exit_to_app</mat-icon>
+                  Logout
+               </a>
+            </div>
+         </li>
+      </ul>
+   </div>
+ </nav>
+<div class="modal fade" id="paymentReminder" tabindex="-1">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title">O seu acesso expira em 12 dias e 21h. <br> Para renovar, acesse: <a href="https://www.mentorwesleyandrade.com.br/renewal/world/">Renovação</a></h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">×</span>
+           </button>
+        </div>
+     </div>
+  </div>
+</div>
+<style>
+  #float-fa-parent {
+  color:#3f6ad8;
+  opacity:0.8;
+  }
+  #float-fa-parent:hover {
+  opacity:1;
+  }
+  #float-fa-parent:hover #float-fa {
+  opacity:1;
+  }
+  #float-fa {
+  position: absolute;
+  left: 36px;
+  width: 25px;
+  font-size: 0.9rem;
+  color: #3f6ad8;
+  top: 36px;
+  }
+  .sentinela {
+  color:rgb(0, 247, 0) !important;
+  font-weight:600 !important;
+  }
+</style>
+<button onclick="window.location.reload(false);" class="util-button" id="reloadButton" title="Reload!">
+  <mat-icon>sync</mat-icon>
+</button>
+<button onclick="scrollTsso()" data-dir="0" class="util-button" id="backToTop" title="Scroll!">
+  <mat-icon>arrow_upward</mat-icon>
+</button>
+
+<div class="app-main__inner">
+   <div class="container-fluid">
+      
+      <div class="row justify-content-center">
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Taça Gloria Eterna
+                  <mat-progress-spinner *ngIf="!eventsTaca" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               
+               
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsTaca">
+                  
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/copa/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Copa
+                  <mat-progress-spinner *ngIf="!eventsCopa" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsCopa">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/copa/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Ligas America
+                  <mat-progress-spinner *ngIf="!eventsAmerica" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsAmerica">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/copa/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Copa das Estrelas
+                  <mat-progress-spinner *ngIf="!eventsCopaEstrelas" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsCopaEstrelas">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/copa/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Campeonato Italiano
+                  <mat-progress-spinner *ngIf="!eventsCampeonatoItaliano" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsCampeonatoItaliano">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/copa/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Premier
+                  <mat-progress-spinner *ngIf="!eventsPremier" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsPremier">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/premier/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div> 
+         <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="card text-center mb-4">
+               <div class="card-header">
+                  Campeões  
+                  <mat-progress-spinner *ngIf="!eventsChampions" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
+               </div>
+               <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsChampions">
+                  <div class="container c-pad">
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.homeTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.awayTeam,'text-success':item.winBet == item.homeTeam}" style="font-size:1.2em;">{{item.homeTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><span class="badge badge-secondary mb-3"><mat-icon style="font-size: 18px;">watch_later</mat-icon> {{item.hour}}</span></div>
+                     </div>
+                     <div class="row ml-lg-1 ml-md-0 mb-2">
+                        <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.awayTeam}}.svg" width="32" height="32"></div>
+                        <div class="col-5 text-left my-auto name-wrap">{{item.awayTeam}}</div>
+                        <div class="col-3 text-right my-auto border-right"><b [ngClass]="{'text-danger': item.winBet == item.homeTeam,'text-success':item.winBet == item.awayTeam}" style="font-size:1.2em;">{{item.awayTeamScore}}</b></div>
+                        <div class="col-2 my-auto text-center"><a href="odds/champions/{{item['id']}}"><button class="btn btn-info">Odds</button></a></div>
+                     </div>
+                     <hr class="half-rule">
+                  </div>
+               </div>
+            </div>
+         </div>         
+      </div>
+   </div>
+</div>

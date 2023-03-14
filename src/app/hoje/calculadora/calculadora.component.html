@@ -1,0 +1,227 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom mb-4">
+  <a class="plain-a" href="home?bookie=betano&season=world">
+     <mat-icon class="nav-link-icon">home</mat-icon>
+  </a>
+  <a class="plain-a" href="home?bookie=bet365&season=euro"><img class="uhover " src="../../assets/icons/euro.svg" width="48"></a>
+  <a class="plain-a" href="home?bookie=bet365&season=world"><img class="uhover uselected" src="../../assets/icons/copa.svg" width="48"></a>
+  <a class="plain-a" href="home?bookie=bet365&season=premier"><img class="uhover " src="../../assets/icons/premier.svg" width="48"></a>
+  <a class="plain-a" href="home?bookie=bet365&season=super"><img class="uhover " src="../../assets/icons/super.svg" width="48"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+     <ul class="navbar-nav">
+        <li class="nav-item">
+           <a class="nav-link nav-link-custom" href="home?bookie=betano&season=bet365">
+              <mat-icon >home</mat-icon>
+              Início
+           </a>
+        </li>
+        <li class="nav-item ">
+           <a class="nav-link nav-link-custom" href="overview?bookie=bet365&season=world">
+              <mat-icon>fast_rewind</mat-icon>
+              Últ. Jogos
+           </a>
+        </li>
+        <li class="nav-item ">
+           <a class="nav-link nav-link-custom" href="nextgames?bookie=bet365&season=world">
+              <mat-icon>fast_forward</mat-icon>
+              Próx. Jogos
+           </a>
+        </li>
+        <li class="nav-item dropdown ">
+           <a class="nav-link nav-link-custom dropdown-toggle nav-item-active" id="navbarDropdown" data-toggle="dropdown">
+              <mat-icon>calendar_today</mat-icon>
+              Hoje
+           </a>
+           <div class="dropdown-menu dropdown-menu-custom">
+              <a class="dropdown-item dropdown-item-custom" href="today?bookie=bet365&season=world">Jogos</a>
+              <a class="dropdown-item dropdown-item-custom" href="goalscorers?bookie=bet365&season=world">Artilheiros</a>
+              <a class="dropdown-item dropdown-item-custom" href="calculator?bookie=bet365&season=world">Calculadora</a>
+              <a class="dropdown-item dropdown-item-custom" href="rankings?bookie=bet365&season=world">Rankings</a>
+           </div>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link nav-link-custom dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+              <mat-icon>history</mat-icon>
+              Hist.
+           </a>
+           <div class="dropdown-menu dropdown-menu-custom">
+              <a class="dropdown-item dropdown-item-custom" href="history?bookie=bet365&season=world">Máximas</a>
+              <a class="dropdown-item dropdown-item-custom" href="odds?bookie=bet365&season=world">Odds</a>
+           </div>
+        </li>
+        <!--<li class="nav-item ">
+           <a class="nav-link nav-link-custom sentinela" href="sentinela/world/bet365/"> <i class="nav-link-icon fa fa-robot"></i>Sentinela</a>
+           </li>-->
+        <li class="nav-item ">
+           <a class="nav-link nav-link-custom" href="hourly?bookie=bet365&season=world">
+              <mat-icon>access_time</mat-icon>
+              Horários
+           </a>
+        </li>
+        <!--<li class="nav-item dropdown ">
+           <a class="nav-link nav-link-custom dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" href="https://www.mentorwesleyandrade.com.br/home/world/bet365#">
+           <i class="nav-link-icon fa fa-robot "></i> Sinais
+           </a>
+           <div class="dropdown-menu dropdown-menu-custom">
+           <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/1">Over 1.5</a>
+           <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/3">Over 2.5</a>
+           <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/2">Vencedor do Jogo</a>
+           <a class="dropdown-item dropdown-item-custom" href="https://www.mentorwesleyandrade.com.br/tips/world/bet365/4">Ambas Marcam</a>
+           </div>
+           </li>-->
+        <li class="nav-item ">
+           <a class="nav-link nav-link-custom" href="sim?bookie=bet365&season=world">
+              <mat-icon>gps_fixed</mat-icon>
+              Simulador
+           </a>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link nav-link-custom dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" >
+              <mat-icon>perm_identity</mat-icon>
+              Conta
+           </a>
+           <div class="dropdown-menu dropdown-menu-custom">
+              <a class="dropdown-item dropdown-item-custom" href="telegram/world/">
+                 <mat-icon>send</mat-icon>
+                 Telegram
+              </a>
+              <a class="dropdown-item dropdown-item-custom" href="renewal/world/">
+                 <mat-icon> money</mat-icon>
+                 Renovação
+              </a>
+              <a class="dropdown-item dropdown-item-custom" href="change/world/">
+                 <mat-icon> vpn_key</mat-icon>
+                 Trocar Senha
+              </a>
+              <a class="dropdown-item dropdown-item-custom">
+                 <mat-icon> attach_money</mat-icon>
+                 Venc. 25/05/2022
+              </a>
+              <a class="dropdown-item dropdown-item-custom" href="logout">
+                 <mat-icon>exit_to_app</mat-icon>
+                 Logout
+              </a>
+           </div>
+        </li>
+     </ul>
+  </div>
+</nav>
+<div class="modal fade" id="paymentReminder" tabindex="-1">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title">O seu acesso expira em 12 dias e 21h. <br> Para renovar, acesse: <a href="https://www.mentorwesleyandrade.com.br/renewal/world/">Renovação</a></h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">×</span>
+           </button>
+        </div>
+     </div>
+  </div>
+</div>
+<style>
+  #float-fa-parent {
+  color:#3f6ad8;
+  opacity:0.8;
+  }
+  #float-fa-parent:hover {
+  opacity:1;
+  }
+  #float-fa-parent:hover #float-fa {
+  opacity:1;
+  }
+  #float-fa {
+  position: absolute;
+  left: 36px;
+  width: 25px;
+  font-size: 0.9rem;
+  color: #3f6ad8;
+  top: 36px;
+  }
+  .sentinela {
+  color:rgb(0, 247, 0) !important;
+  font-weight:600 !important;
+  }
+</style>
+<button onclick="window.location.reload(false);" class="util-button" id="reloadButton" title="Reload!">
+  <mat-icon>sync</mat-icon>
+</button>
+<button onclick="scrollTsso()" data-dir="0" class="util-button" id="backToTop" title="Scroll!">
+  <mat-icon>arrow_upward</mat-icon>
+</button>
+<div class="app-main__outer">
+   <div class="app-main__inner">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-2">
+               <div class="card">
+                  <div class="card-header">Configuração</div>
+                  <div class="card-body">
+                     <select name="" id="mkt-name" class="mb-2" data-save="1" data-default="0">
+                        <option value="" disabled="" selected="">Selecione o mercado</option>
+                        <option value="ft">Vencedor FT</option>
+                        <option value="ht">Vencedor HT</option>
+                        <option value="o">Over</option>
+                        <option value="u">Under</option>
+                        <option value="g">Gols</option>
+                        <option value="btts">Ambas Marcam</option>
+                     </select>
+                     <select name="" id="mkt-opt" class="mb-2" data-save="1" data-default="0"></select><br>
+                     <input type="text" placeholder="Banca: 10,00" id="init-stake" class="mb-2" data-save="1" data-default="">
+                     <select name="" id="bet-profit" class="mb-2" data-save="1" data-default="1">
+                        <option value="0" disabled="" selected="">% de Lucro</option>
+                        <option value="0.005">0,5%</option>
+                        <option value="0.01">1%</option>
+                     </select>
+                     <br>
+                     <select name="" id="first-bet" data-save="0">
+                        <option value="-1" disabled="" selected="">Primeira Partida</option>
+                        <option value="0">22:22 - Portugal x México</option>
+                        <option value="1">22:25 - Alemanha x Croácia</option>
+                        <option value="2">22:28 - México x Suíça</option>
+                        <option value="3">22:31 - Inglaterra x Uruguai</option>
+                        <option value="4">22:34 - Portugal x Alemanha</option>
+                        <option value="5">22:37 - França x Espanha</option>
+                        <option value="6">22:40 - Países Baixos x Portugal</option>
+                        <option value="7">22:43 - Croácia x Espanha</option>
+                        <option value="8">22:46 - Países Baixos x Dinamarca</option>
+                        <option value="9">22:49 - Inglaterra x Brasil</option>
+                        <option value="10">22:52 - Bélgica x Dinamarca</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-8 col-sm-12 mt-lg-0 mt-sm-4">
+               <div class="card">
+                  <div class="card-header">Entradas</div>
+                  <div class="card-body table-responsive">
+                     <table class="table table-hover table-bordered table-striped text-center" id="calc-result">
+                        <tbody>
+                           <tr>
+                              <th>#</th>
+                              <th>Partida</th>
+                              <th>Odd</th>
+                              <th>Aposta</th>
+                              <th>Total Apostado</th>
+                              <th>Retorno</th>
+                              <th>Lucro</th>
+                           </tr>
+                           <tr>
+                              <td>1</td>
+                              <td>11:39 Alemanha x Argentina</td>
+                              <td>2.00</td>
+                              <td>10,00</td>
+                              <td>10,00</td>
+                              <td>20,00</td>
+                              <td>10,00</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
