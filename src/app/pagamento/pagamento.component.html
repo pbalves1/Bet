@@ -20,7 +20,7 @@
             </a>
          </li>
          <li class="nav-item  ">
-            <a class="nav-link nav-link-custom" href="https://t.me/betanalyticsbr">
+            <a class="nav-link nav-link-custom" href="https://t.me/betmilhaoesportes">
                <mat-icon>send</mat-icon>
                Telegram
             </a>
@@ -34,14 +34,14 @@
       </ul>
    </div>
  </nav>
-<div class="app-main__outer">
+<div class="app-main__outer limiter">
    <div class="app-main__inner">
       <div class="container-fluid">
          <div class="row justify-content-center">
             <div class="col-lg-12 col-sm-12 col-xs-12">
-               <div class="card text-center mb-4">
-                  <div class="card-header">
-                     OPÇÕES DE PAGAMENTO
+               <div class="card text-center mb-4" style="background-color: transparent;">
+                  <div class="card-header" style="color: white">
+                     OPÇÕES DE PLANO:
                   </div>
                   <div class="card-body">
                      <div class="alert alert-danger">
@@ -49,18 +49,59 @@
                         Aceitamos pagamentos com Cartão de Crédito e Pix.
                      </div>
                      <div class="row justify-content-center">
-                        <div class="col-lg-4 col-sm-12 mb-2">
-                           <div class="card">
+                        <div class="containercards">
+                          <div class="card cardPromo">
                               <div class="card-header">PROMOÇÃO</div>
                               <div class="card-body">
                                  <div class="card-body">
-                                    <h5 class="card-title text-muted text-uppercase text-center">ACESSO TOTAL | ADESÃO + 1 MÊS GRÁTIS</h5>
-                                    <h6 class="card-price text-center">R$ 20,00</h6>
-                                    <div class="adq-1"><button type="submit" (click)="callMeli()" class="mercadopago-button" formmethod="post">Adquirir</button></div>
+                                    <h5 class="card-title text-muted text-uppercase text-center">BETANO | ADESÃO MENSAL</h5>
+                                    <h5 >Vantagens:</h5>
+                                    <h6>Suporte 24 horas</h6>
+                                    <h6>Curso de como operar</h6>
+                                    <br/>
+                                    <h6 class="card-price text-center">R$ 29,99</h6>
+                                    <div class="adq-1"><button type="submit" (click)="callMeli(1)" class="mercadopago-button" formmethod="post">Adquirir</button></div>
                                     <hr>
                                  </div>
                               </div>
-                           </div>
+                          </div>
+
+                          <div class="card cardPromo">
+                            <div class="card-header">SUPER PROMOÇÃO</div>
+                            <div class="card-body">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">BETANO | ADESÃO TRIMESTRAL</h5>
+                                <h5>Vantagens:</h5>
+                                <h6>Suporte 24 horas</h6>
+                                <h6>Curso de como operar</h6>
+                                <h6>Mentoria Individual</h6>
+                                <br/>
+                                <h6 class="card-price text-center">R$ 84,99</h6>
+                                <div class="adq-1"><button type="submit" (click)="callMeli(3)" class="mercadopago-button"
+                                    formmethod="post">Adquirir</button></div>
+                                <hr>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card cardPromo">
+                            <div class="card-header">MEGA PROMOÇÃO</div>
+                            <div class="card-body">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">BETANO | ADESÃO SEMESTRAL</h5>
+                                <h5>Vantagens:</h5>
+                                <h6>Suporte 24 horas</h6>
+                                <h6>Curso de como operar</h6>
+                                <h6>Mentoria Individual</h6>
+                                <h6>Grupo VIP (Sinais 24hs)</h6>
+                                <br />
+                                <h6 class="card-price text-center">R$ 175,99</h6>
+                                <div class="adq-1"><button type="submit" (click)="callMeli(6)" class="mercadopago-button"
+                                    formmethod="post">Adquirir</button></div>
+                                <hr>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                      </div>
                   </div>

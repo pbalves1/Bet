@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom mb-4">
-   
+
    <!--<a class="plain-a" href="overview/betano/copa"><img class="uhover" [ngClass]="{'uselected':season == 'copa'}" src="../../assets/icons/world.svg" width="48"></a>
    <a class="plain-a" href="overview/betano/premier" ><img class="uhover" [ngClass]="{'uselected':season == 'premier'}" src="../../assets/icons/premier.svg" width="48"></a>
    -->
@@ -52,7 +52,7 @@
                Conta
             </a>
             <div class="dropdown-menu dropdown-menu-custom">
-               <a class="dropdown-item dropdown-item-custom" href="https://t.me/betanalyticsbr">
+               <a class="dropdown-item dropdown-item-custom" href="https://t.me/betmilhaoesportes">
                   <mat-icon>send</mat-icon>
                   Telegram
                </a>
@@ -118,7 +118,7 @@
 
 <div class="app-main__inner">
    <div class="container-fluid">
-      
+
       <div class="row justify-content-center">
          <div class="col-lg-3 col-md-6 col-xs-12">
             <div class="card text-center mb-4">
@@ -126,10 +126,10 @@
                   Taça Gloria Eterna
                   <mat-progress-spinner *ngIf="!eventsTaca" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
                </div>
-               
-               
+
+
                <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsTaca">
-                  
+
                   <div class="container c-pad">
                      <div class="row ml-lg-1 ml-md-0 mb-2">
                         <div class="col-1 mr-lg-1 mr-md-0"><img src="../../assets/icons/{{item.homeTeam}}.svg" width="32" height="32"></div>
@@ -272,11 +272,11 @@
                   </div>
                </div>
             </div>
-         </div> 
+         </div>
          <div class="col-lg-3 col-md-6 col-xs-12">
             <div class="card text-center mb-4">
                <div class="card-header">
-                  Campeões  
+                  Campeões
                   <mat-progress-spinner *ngIf="!eventsChampions" class="spinner" [color]="color" [mode]="mode" [value]="value" diameter="20"></mat-progress-spinner>
                </div>
                <div class="card-body cb-pad" id="world-games" *ngFor="let item of eventsChampions">
@@ -297,7 +297,7 @@
                   </div>
                </div>
             </div>
-         </div>         
+         </div>
       </div>
    </div>
 </div>

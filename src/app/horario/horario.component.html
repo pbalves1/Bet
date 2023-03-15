@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom mb-4">
-   
+
    <!--<a class="plain-a" href="horario/betano/copa"><img class="uhover" [ngClass]="{'uselected':season == 'copa'}" src="../../assets/icons/world.svg" width="48"></a>
    <a class="plain-a" href="horario/betano/champions" ><img class="uhover" [ngClass]="{'uselected':season == 'champions'}" src="../../assets/icons/champions.svg" width="48"></a>
    <a class="plain-a" href="horario/betano/premier" ><img class="uhover" [ngClass]="{'uselected':season == 'premier'}" src="../../assets/icons/premier.svg" width="48"></a>
@@ -83,7 +83,7 @@
                Conta
             </a>
             <div class="dropdown-menu dropdown-menu-custom">
-               <a class="dropdown-item dropdown-item-custom" href="https://t.me/betanalyticsbr">
+               <a class="dropdown-item dropdown-item-custom" href="https://t.me/betmilhaoesportes">
                   <mat-icon>send</mat-icon>
                   Telegram
                </a>
@@ -161,11 +161,11 @@
                                  <input [matDatepicker]="basicDatepicker" [max]="todayDate" name="databusca" [(ngModel)]="dateValue">
                                  <mat-datepicker-toggle [for]="basicDatepicker"></mat-datepicker-toggle>
                                  <mat-datepicker #basicDatepicker></mat-datepicker>
-                                 <button (click)="findByDate()" class="btn btn-primary ml-2" type="submit">Buscar</button> 
+                                 <button (click)="findByDate()" class="btn btn-primary ml-2" type="submit">Buscar</button>
                               </div>
                            </form>
                         </div>
-                        <div class="col-md-6 col-sm-12"> 
+                        <div class="col-md-6 col-sm-12">
                            <button class="btn btn-primary ml-2 button-ligas" type="submit" (click)="toogleTodasLigas()">Uma Liga</button>
                            <button class="btn btn-primary ml-2 button-ligas" type="submit" (click)="toogleTodasLigas()">Todas Ligas</button>
                         </div>
@@ -177,12 +177,12 @@
                <div class="card">
                   <div class="card-header">Mercados</div>
                   <div class="card-body">
-                     <!--<div class="nav nav-pills nav-justified" id="market-tabs" role="tablist"> 
-                        <a class="nav-link nav-item tendency-tab active" (click)="changeMercadoType('RESULTADO FT')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Resultado FT</a> 
-                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('OVER')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Over</a> 
-                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('UNDER')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Under</a> 
-                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('GOLS')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Gols</a> 
-                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('AMBAS MARCAM')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Ambas Marcam</a> 
+                     <!--<div class="nav nav-pills nav-justified" id="market-tabs" role="tablist">
+                        <a class="nav-link nav-item tendency-tab active" (click)="changeMercadoType('RESULTADO FT')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Resultado FT</a>
+                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('OVER')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Over</a>
+                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('UNDER')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Under</a>
+                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('GOLS')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Gols</a>
+                        <a class="nav-link nav-item tendency-tab" (click)="changeMercadoType('AMBAS MARCAM')" data-toggle="pill" role="tab" data-lb-save="true" data-lb-name="hourly-market-tab">Ambas Marcam</a>
                      </div>-->
                      <select [(ngModel)]="mercado" (change)="changeMercadoType()" name="cars" class="nav-link nav-item tendency-tab" id="cars">
                         <option value="RESULTADO FT" class="option-mercado" id="mercadoOption">Resultado FT</option>
@@ -202,7 +202,7 @@
                            <button (click)="changeMercados('placar', '3-2', '3-2')" class="btn btn-success cMkt my-2" data-id="3x2" type="submit">3x2</button>
                            <button (click)="changeMercados('placar', '4-0', '4-0')" class="btn btn-success cMkt my-2" data-id="4x0" type="submit">4x0</button>
                            <button (click)="changeMercados('casa5', null, '5+ (CASA)')" class="btn btn-success cMkt my-2" data-id="hany" type="submit">5+ (Casa)</button>
-                           <br> 
+                           <br>
                            <button (click)="changeMercados('empate', null, 'EMPATE')" class="btn btn-success cMkt my-2" data-id="dftw" type="submit">Empate</button>
                            <button (click)="changeMercados('placar', '0-0', '0-0')" class="btn btn-success cMkt my-2" data-id="0x0" type="submit">0x0</button>
                            <button (click)="changeMercados('placar', '1-1', '1-1')" class="btn btn-success cMkt my-2" data-id="1x1" type="submit">1x1</button>
@@ -219,30 +219,30 @@
                            <button (click)="changeMercados('placar', '0-4', '0-4')" class="btn btn-success cMkt my-2" data-id="0x4" type="submit">0x4</button>
                            <button (click)="changeMercados('fora5', null, '5+ (FORA)')" class="btn btn-success cMkt my-2" data-id="aany" type="submit">5+ (Fora)</button>
                         </div>
-                        <div class="tab-pane fade show active" id="g-o" role="tabpanel" *ngIf="mercado == 'OVER'"> 
-                           <button (click)="changeMercados('over', 0, 'OVER 0.5')" class="btn btn-success cMkt my-2" data-id="o05" type="submit">Over 0.5</button> 
-                           <button (click)="changeMercados('over', 1, 'OVER 1.5')" class="btn btn-success cMkt my-2" data-id="o15" type="submit">Over 1.5</button> 
-                           <button (click)="changeMercados('over', 2, 'OVER 2.5')" class="btn btn-success cMkt my-2" data-id="o25" type="submit">Over 2.5</button> 
-                           <button (click)="changeMercados('over', 3, 'OVER 3.5')" class="btn btn-success cMkt my-2" data-id="o35" type="submit">Over 3.5</button> 
+                        <div class="tab-pane fade show active" id="g-o" role="tabpanel" *ngIf="mercado == 'OVER'">
+                           <button (click)="changeMercados('over', 0, 'OVER 0.5')" class="btn btn-success cMkt my-2" data-id="o05" type="submit">Over 0.5</button>
+                           <button (click)="changeMercados('over', 1, 'OVER 1.5')" class="btn btn-success cMkt my-2" data-id="o15" type="submit">Over 1.5</button>
+                           <button (click)="changeMercados('over', 2, 'OVER 2.5')" class="btn btn-success cMkt my-2" data-id="o25" type="submit">Over 2.5</button>
+                           <button (click)="changeMercados('over', 3, 'OVER 3.5')" class="btn btn-success cMkt my-2" data-id="o35" type="submit">Over 3.5</button>
                         </div>
-                        <div class="tab-pane fade show active" id="g-u" *ngIf="mercado == 'UNDER'" role="tabpanel"> 
-                           <button (click)="changeMercados('under', 1, 'UNDER 0.5')" class="btn btn-success cMkt my-2" data-id="u05" type="submit">Under 0.5</button> 
-                           <button (click)="changeMercados('under', 2, 'UNDER 1.5')" class="btn btn-success cMkt my-2" data-id="u15" type="submit">Under 1.5</button> 
-                           <button (click)="changeMercados('under', 3, 'UNDER 2.5')" class="btn btn-success cMkt my-2" data-id="u25" type="submit">Under 2.5</button> 
-                           <button (click)="changeMercados('under', 4, 'UNDER 3.5')" class="btn btn-success cMkt my-2" data-id="u35" type="submit">Under 3.5</button> 
+                        <div class="tab-pane fade show active" id="g-u" *ngIf="mercado == 'UNDER'" role="tabpanel">
+                           <button (click)="changeMercados('under', 1, 'UNDER 0.5')" class="btn btn-success cMkt my-2" data-id="u05" type="submit">Under 0.5</button>
+                           <button (click)="changeMercados('under', 2, 'UNDER 1.5')" class="btn btn-success cMkt my-2" data-id="u15" type="submit">Under 1.5</button>
+                           <button (click)="changeMercados('under', 3, 'UNDER 2.5')" class="btn btn-success cMkt my-2" data-id="u25" type="submit">Under 2.5</button>
+                           <button (click)="changeMercados('under', 4, 'UNDER 3.5')" class="btn btn-success cMkt my-2" data-id="u35" type="submit">Under 3.5</button>
                         </div>
-                        <div class="tab-pane fade show active" id="g-g" *ngIf="mercado == 'GOLS'" role="tabpanel"> 
-                           <button (click)="changeMercados('gols', 0, '0 GOLS')" class="btn btn-success cMkt my-2" data-id="0g" type="submit">0 Gols</button> 
-                           <button (click)="changeMercados('gols', 1, '1 GOLS')" class="btn btn-success cMkt my-2" data-id="1g" type="submit">1 Gol</button> 
-                           <button (click)="changeMercados('gols', 2, '2 GOLS')" class="btn btn-success cMkt my-2" data-id="2g" type="submit">2 Gols</button> 
-                           <button (click)="changeMercados('gols', 3, '3 GOLS')" class="btn btn-success cMkt my-2" data-id="3g" type="submit">3 Gols</button> 
-                           <button (click)="changeMercados('gols', 4, '4 GOLS')" class="btn btn-success cMkt my-2" data-id="4g" type="submit">4 Gols</button> 
-                           <button (click)="changeMercados('golsmais', null, '5+ GOLS')" class="btn btn-success cMkt my-2" data-id="5g+" type="submit">5+ Gols</button> 
+                        <div class="tab-pane fade show active" id="g-g" *ngIf="mercado == 'GOLS'" role="tabpanel">
+                           <button (click)="changeMercados('gols', 0, '0 GOLS')" class="btn btn-success cMkt my-2" data-id="0g" type="submit">0 Gols</button>
+                           <button (click)="changeMercados('gols', 1, '1 GOLS')" class="btn btn-success cMkt my-2" data-id="1g" type="submit">1 Gol</button>
+                           <button (click)="changeMercados('gols', 2, '2 GOLS')" class="btn btn-success cMkt my-2" data-id="2g" type="submit">2 Gols</button>
+                           <button (click)="changeMercados('gols', 3, '3 GOLS')" class="btn btn-success cMkt my-2" data-id="3g" type="submit">3 Gols</button>
+                           <button (click)="changeMercados('gols', 4, '4 GOLS')" class="btn btn-success cMkt my-2" data-id="4g" type="submit">4 Gols</button>
+                           <button (click)="changeMercados('golsmais', null, '5+ GOLS')" class="btn btn-success cMkt my-2" data-id="5g+" type="submit">5+ Gols</button>
                         </div>
-                        <div class="tab-pane fade show active" id="g-btts" *ngIf="mercado == 'AMBAS MARCAM'" role="tabpanel"> 
-                           <button (click)="changeMercados('ambasmarcam', null, 'SIM')" class="btn btn-success cMkt my-2" data-id="btts_y" type="submit">Sim</button> 
-                           <button (click)="changeMercados('nempate', null, 'NÃO')" class="btn btn-success cMkt my-2" data-id="btts_n" type="submit">Não</button> 
-                        </div> 
+                        <div class="tab-pane fade show active" id="g-btts" *ngIf="mercado == 'AMBAS MARCAM'" role="tabpanel">
+                           <button (click)="changeMercados('ambasmarcam', null, 'SIM')" class="btn btn-success cMkt my-2" data-id="btts_y" type="submit">Sim</button>
+                           <button (click)="changeMercados('nempate', null, 'NÃO')" class="btn btn-success cMkt my-2" data-id="btts_n" type="submit">Não</button>
+                        </div>
                      </div>
                      <div class="custom-control custom-switch"> <input type="checkbox" class="custom-control-input" id="hl-markets" data-lb-save="true" data-lb-name="hourly-hl-market"> </div>
                      <hr>
@@ -293,7 +293,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosTacage.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!---->
                                     <td *ngFor="let tacaInd of indicesCopa" (click)="selectSame(horariosTacage, indicesCopa, horariosTacage.values[ind.indice][tacaInd])" class="s-td" [ngClass]="{'gold-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'gold-select','antiquewhite-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'antiquewhite-select','cyan-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'cyan-select','crimson-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'crimson-select','teal-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'teal-select','orange-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'orange-select','purple-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'purple-select','blue-select':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].selectClass == 'blue-select', 'eventNone':horariosTacage.values[ind.indice][tacaInd] == none,'eventGreen':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].ativo, 'eventRed':horariosTacage.values[ind.indice][tacaInd] && horariosTacage.values[ind.indice][tacaInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosTacage.values[ind.indice][tacaInd] ? horariosTacage.values[ind.indice][tacaInd].hour+' '+horariosTacage.values[ind.indice][tacaInd].homeTeam+' x '+horariosTacage.values[ind.indice][tacaInd].awayTeam:'?'}}">{{horariosTacage.values[ind.indice][tacaInd] ? horariosTacage.values[ind.indice][tacaInd].score:'?'}}</td>
@@ -301,7 +301,7 @@
                                  </tr>
                               </tbody>
                            </table>
-                        </div>         
+                        </div>
                         <div class="col-lg-12 col-md-12 table-responsive" [ngClass]="todasLigas ?'todas-ligas':''" id="world-table-wrapper"  *ngIf="season == 'copa' || todasLigas">
                            Copa
                            <table class="table table-hover table-bordered text-center mini-table" id="world-table">
@@ -339,7 +339,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosCopa.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!---->
                                     <td *ngFor="let copaInd of indicesCopa" (click)="selectSame(horariosCopa, indicesCopa, horariosCopa.values[ind.indice][copaInd])" class="s-td" [ngClass]="{'gold-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'gold-select','antiquewhite-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'antiquewhite-select','cyan-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'cyan-select','crimson-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'crimson-select','teal-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'teal-select','orange-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'orange-select','purple-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'purple-select','blue-select':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].selectClass == 'blue-select', 'eventNone':horariosCopa.values[ind.indice][copaInd] == none,'eventGreen':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].ativo, 'eventRed':horariosCopa.values[ind.indice][copaInd] && horariosCopa.values[ind.indice][copaInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosCopa.values[ind.indice][copaInd] ? horariosCopa.values[ind.indice][copaInd].hour+' '+horariosCopa.values[ind.indice][copaInd].homeTeam+' x '+horariosCopa.values[ind.indice][copaInd].awayTeam:'?'}}">{{horariosCopa.values[ind.indice][copaInd] ? horariosCopa.values[ind.indice][copaInd].score:'?'}}</td>
@@ -387,7 +387,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosAmerica.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!---->
                                     <td *ngFor="let americaInd of indicesCopa" (click)="selectSame(horariosAmerica, indicesCopa, horariosAmerica.values[ind.indice][americaInd])" class="s-td" [ngClass]="{'gold-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'gold-select','antiquewhite-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'antiquewhite-select','cyan-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'cyan-select','crimson-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'crimson-select','teal-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'teal-select','orange-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'orange-select','purple-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'purple-select','blue-select':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].selectClass == 'blue-select', 'eventNone':horariosAmerica.values[ind.indice][americaInd] == none,'eventGreen':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].ativo, 'eventRed':horariosAmerica.values[ind.indice][americaInd] && horariosAmerica.values[ind.indice][americaInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosAmerica.values[ind.indice][americaInd] ? horariosAmerica.values[ind.indice][americaInd].hour+' '+horariosAmerica.values[ind.indice][americaInd].homeTeam+' x '+horariosAmerica.values[ind.indice][americaInd].awayTeam:'?'}}">{{horariosAmerica.values[ind.indice][americaInd] ? horariosAmerica.values[ind.indice][americaInd].score:'?'}}</td>
@@ -433,7 +433,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosEstrelas.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!---->
                                     <td *ngFor="let estrelasInd of indicesChampions" (click)="selectSame(horariosEstrelas, indicesChampions, horariosEstrelas.values[ind.indice][estrelasInd])" class="s-td" [ngClass]="{'gold-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'gold-select','antiquewhite-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'antiquewhite-select','cyan-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'cyan-select','crimson-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'crimson-select','teal-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'teal-select','orange-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'orange-select','purple-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'purple-select','blue-select':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].selectClass == 'blue-select', 'eventNone':horariosEstrelas.values[ind.indice][estrelasInd] == none,'eventGreen':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].ativo, 'eventRed':horariosEstrelas.values[ind.indice][estrelasInd] && horariosEstrelas.values[ind.indice][estrelasInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosEstrelas.values[ind.indice][estrelasInd] ? horariosEstrelas.values[ind.indice][estrelasInd].hour+' '+horariosEstrelas.values[ind.indice][estrelasInd].homeTeam+' x '+horariosEstrelas.values[ind.indice][estrelasInd].awayTeam:'?'}}">{{horariosEstrelas.values[ind.indice][estrelasInd] ? horariosEstrelas.values[ind.indice][estrelasInd].score:'?'}}</td>
@@ -479,7 +479,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosItaliano.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!--[ngClass]="horarios.values[ind.indice][copaInd].ativo?'eventGreen':'eventRed'"-->
                                     <td *ngFor="let italianoInd of indicesPremier" (click)="selectSame(horariosItaliano, indicesPremier, horariosItaliano.values[ind.indice][italianoInd])" class="s-td" [ngClass]="{'gold-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'gold-select','antiquewhite-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'antiquewhite-select','cyan-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'cyan-select','crimson-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'crimson-select','teal-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'teal-select','orange-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'orange-select','purple-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'purple-select','blue-select':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].selectClass == 'blue-select', 'eventNone':horariosItaliano.values[ind.indice][italianoInd] == none,'eventGreen':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].ativo, 'eventRed':horariosItaliano.values[ind.indice][italianoInd] && horariosItaliano.values[ind.indice][italianoInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosItaliano.values[ind.indice][italianoInd] ? horariosItaliano.values[ind.indice][italianoInd].hour+' '+horariosItaliano.values[ind.indice][italianoInd].homeTeam+' x '+horariosItaliano.values[ind.indice][italianoInd].awayTeam:'?'}}">{{horariosItaliano.values[ind.indice][italianoInd] ? horariosItaliano.values[ind.indice][italianoInd].score:'?'}}</td>
@@ -525,7 +525,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosPremier.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!--[ngClass]="horarios.values[ind.indice][copaInd].ativo?'eventGreen':'eventRed'"-->
                                     <td *ngFor="let copaInd of indicesPremier" (click)="selectSame(horariosPremier, indicesPremier, horariosPremier.values[ind.indice][copaInd])" class="s-td" [ngClass]="{'gold-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'gold-select','antiquewhite-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'antiquewhite-select','cyan-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'cyan-select','crimson-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'crimson-select','teal-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'teal-select','orange-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'orange-select','purple-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'purple-select','blue-select':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].selectClass == 'blue-select', 'eventNone':horariosPremier.values[ind.indice][copaInd] == none,'eventGreen':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].ativo, 'eventRed':horariosPremier.values[ind.indice][copaInd] && horariosPremier.values[ind.indice][copaInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosPremier.values[ind.indice][copaInd] ? horariosPremier.values[ind.indice][copaInd].hour+' '+horariosPremier.values[ind.indice][copaInd].homeTeam+' x '+horariosPremier.values[ind.indice][copaInd].awayTeam:'?'}}">{{horariosPremier.values[ind.indice][copaInd] ? horariosPremier.values[ind.indice][copaInd].score:'?'}}</td>
@@ -535,7 +535,7 @@
                            </table>
                         </div>
                         <div class="col-lg-12 col-md-12 table-responsive" [ngClass]="todasLigas ?'todas-ligas':''" id="world-table-wrapper"  *ngIf="season == 'champions' || todasLigas">
-                           Champions 
+                           Champions
                            <table class="table table-hover table-bordered text-center mini-table" id="world-table">
                               <tbody>
                                  <tr class="min-tr">
@@ -571,7 +571,7 @@
                                  </tr>
                               </tbody>
                               <tbody *ngFor="let ind of horariosChampions.indices_stamp">
-                                 <tr class="min-tr-f" data-id="{{ind.indice}}" > 
+                                 <tr class="min-tr-f" data-id="{{ind.indice}}" >
                                     <td ><span class="hour-sel" data-id="{{ind.indice}}" > {{ind.hour}}</span></td>
                                     <!---->
                                     <td *ngFor="let copaInd of indicesChampions" (click)="selectSame(horariosChampions, indicesChampions, horariosChampions.values[ind.indice][copaInd])" class="s-td" [ngClass]="{'gold-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'gold-select','antiquewhite-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'antiquewhite-select','cyan-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'cyan-select','crimson-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'crimson-select','teal-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'teal-select','orange-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'orange-select','purple-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'purple-select','blue-select':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].selectClass == 'blue-select', 'eventNone':horariosChampions.values[ind.indice][copaInd] == none,'eventGreen':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].ativo, 'eventRed':horariosChampions.values[ind.indice][copaInd] && horariosChampions.values[ind.indice][copaInd].ativo == false}"  data-gidx="0" data-toggle="tooltip" data-placement="top" title="{{horariosChampions.values[ind.indice][copaInd] ? horariosChampions.values[ind.indice][copaInd].hour+' '+horariosChampions.values[ind.indice][copaInd].homeTeam+' x '+horariosChampions.values[ind.indice][copaInd].awayTeam:'?'}}">{{horariosChampions.values[ind.indice][copaInd] ? horariosChampions.values[ind.indice][copaInd].score:'?'}}</td>
@@ -582,7 +582,7 @@
                         </div>
 
                      </div>
-                     
+
                   </div>
                </div>
             </div>

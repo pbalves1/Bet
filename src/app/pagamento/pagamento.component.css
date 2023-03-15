@@ -25,7 +25,30 @@ li {
 
 /* Hover Effects on Card */
 
+.limiter {
+  width: 100vw;
+  height: 89vh;
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url('../../assets/images/back.jpeg');
+  background-repeat: no-repeat;
+}
+
+.cardPromo{
+  width: 25rem;
+  margin-bottom: 3rem;
+}
+
+.containercards{
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 992px) {
+
+
   .pricing .card:hover {
     margin-top: -.25rem;
     margin-bottom: .25rem;
