@@ -11,7 +11,8 @@ export class ApiService {
   }
 
   //private USER_URL = 'http://192.168.0.232:5007/';
-  private BETANO_URL = 'https://55tnwfz37f.execute-api.us-east-1.amazonaws.com/master/';
+  // private BETANO_URL = 'https://55tnwfz37f.execute-api.us-east-1.amazonaws.com/master/';
+  private BETANO_URL = 'https://lo8qoiudbg.execute-api.sa-east-1.amazonaws.com/default/'
 
   isTokenExpired(token) {
 
