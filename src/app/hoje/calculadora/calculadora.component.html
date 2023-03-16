@@ -12,19 +12,19 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
      <ul class="navbar-nav">
         <li class="nav-item">
-           <a class="nav-link nav-link-custom" href="home?bookie=betano&season=bet365">
+           <a class="nav-link nav-link-custom" routerLink="home?bookie=betano&season=bet365">
               <mat-icon >home</mat-icon>
               Início
            </a>
         </li>
         <li class="nav-item ">
-           <a class="nav-link nav-link-custom" href="overview?bookie=bet365&season=world">
+           <a class="nav-link nav-link-custom" routerLink="overview?bookie=bet365&season=world">
               <mat-icon>fast_rewind</mat-icon>
               Últ. Jogos
            </a>
         </li>
         <li class="nav-item ">
-           <a class="nav-link nav-link-custom" href="nextgames?bookie=bet365&season=world">
+           <a class="nav-link nav-link-custom" routerLink="nextgames?bookie=bet365&season=world">
               <mat-icon>fast_forward</mat-icon>
               Próx. Jogos
            </a>
@@ -35,10 +35,10 @@
               Hoje
            </a>
            <div class="dropdown-menu dropdown-menu-custom">
-              <a class="dropdown-item dropdown-item-custom" href="today?bookie=bet365&season=world">Jogos</a>
-              <a class="dropdown-item dropdown-item-custom" href="goalscorers?bookie=bet365&season=world">Artilheiros</a>
-              <a class="dropdown-item dropdown-item-custom" href="calculator?bookie=bet365&season=world">Calculadora</a>
-              <a class="dropdown-item dropdown-item-custom" href="rankings?bookie=bet365&season=world">Rankings</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="today?bookie=bet365&season=world">Jogos</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="goalscorers?bookie=bet365&season=world">Artilheiros</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="calculator?bookie=bet365&season=world">Calculadora</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="rankings?bookie=bet365&season=world">Rankings</a>
            </div>
         </li>
         <li class="nav-item dropdown">
@@ -47,15 +47,15 @@
               Hist.
            </a>
            <div class="dropdown-menu dropdown-menu-custom">
-              <a class="dropdown-item dropdown-item-custom" href="history?bookie=bet365&season=world">Máximas</a>
-              <a class="dropdown-item dropdown-item-custom" href="odds?bookie=bet365&season=world">Odds</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="history?bookie=bet365&season=world">Máximas</a>
+              <a class="dropdown-item dropdown-item-custom" routerLink="odds?bookie=bet365&season=world">Odds</a>
            </div>
         </li>
         <!--<li class="nav-item ">
            <a class="nav-link nav-link-custom sentinela" href="sentinela/world/bet365/"> <i class="nav-link-icon fa fa-robot"></i>Sentinela</a>
            </li>-->
         <li class="nav-item ">
-           <a class="nav-link nav-link-custom" href="hourly?bookie=bet365&season=world">
+           <a class="nav-link nav-link-custom" routerLink="hourly?bookie=bet365&season=world">
               <mat-icon>access_time</mat-icon>
               Horários
            </a>
@@ -72,7 +72,7 @@
            </div>
            </li>-->
         <li class="nav-item ">
-           <a class="nav-link nav-link-custom" href="sim?bookie=bet365&season=world">
+           <a class="nav-link nav-link-custom" routerLink="sim?bookie=bet365&season=world">
               <mat-icon>gps_fixed</mat-icon>
               Simulador
            </a>
@@ -83,15 +83,15 @@
               Conta
            </a>
            <div class="dropdown-menu dropdown-menu-custom">
-              <a class="dropdown-item dropdown-item-custom" href="telegram/world/">
+              <a class="dropdown-item dropdown-item-custom" routerLink="telegram/world/">
                  <mat-icon>send</mat-icon>
                  Telegram
               </a>
-              <a class="dropdown-item dropdown-item-custom" href="renewal/world/">
+              <a class="dropdown-item dropdown-item-custom" routerLink="renewal/world/">
                  <mat-icon> money</mat-icon>
                  Renovação
               </a>
-              <a class="dropdown-item dropdown-item-custom" href="change/world/">
+              <a class="dropdown-item dropdown-item-custom" routerLink="change/world/">
                  <mat-icon> vpn_key</mat-icon>
                  Trocar Senha
               </a>
@@ -99,7 +99,7 @@
                  <mat-icon> attach_money</mat-icon>
                  Venc. 25/05/2022
               </a>
-              <a class="dropdown-item dropdown-item-custom" href="logout">
+              <a class="dropdown-item dropdown-item-custom" routerLink="logout">
                  <mat-icon>exit_to_app</mat-icon>
                  Logout
               </a>

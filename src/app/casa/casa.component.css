@@ -1,3 +1,25 @@
+*{
+  overflow: hidden;
+}
+
 .navbar{
   background-color: #2148C0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.container{
+  max-width: 100vw; 
+  max-height: 92.5vh;
+}
+
+.limiter {
+  height: 92.5vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-size: cover;
+  background-image: url('../../assets/images/back.jpeg');
+  background-repeat: no-repeat;
 }

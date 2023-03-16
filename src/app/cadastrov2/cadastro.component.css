@@ -7,22 +7,22 @@
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../../assets/fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('../../assets/fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../../assets/fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../../assets/fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../../assets/fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../../assets/fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../../assets/fonts/poppins/Poppins-SemiBold.ttf'); 
+  src: url('../../assets/fonts/poppins/Poppins-SemiBold.ttf');
 }
 
 
@@ -32,14 +32,25 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+}
+
+
+.limiter {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-size: cover;
+  background-image: url('../../assets/images/back.jpeg');
+  background-repeat: no-repeat;
 }
 
 /*---------------------------------------------*/
@@ -148,6 +159,7 @@ iframe {
   line-height: 1.5;
   color: #333333;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .bg1 {background-color: #3b5998}
@@ -164,7 +176,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -183,7 +195,6 @@ iframe {
 .wrap-login100 {
   width: 500px;
   background: #fff;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -319,7 +330,7 @@ iframe {
   display: block;
   position: relative;
   z-index: 1;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   overflow: hidden;
   margin: 0 auto;
 
@@ -335,8 +346,8 @@ iframe {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #D5FF33;
-  background: -webkit-linear-gradient(right, ##D5FF33, #fc00ff, ##D5FF33, #fc00ff);
+  background: #2148c0;
+  background: -webkit-linear-gradient(right, ##2148c0, #fc00ff, ##2148c0, #fc00ff);
   background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
   background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
   background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
@@ -352,7 +363,7 @@ iframe {
 .login100-form-btn {
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #000;
+  color: white;
   line-height: 1.2;
   text-transform: uppercase;
 
@@ -473,7 +484,7 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
   }
-} 
+}
 
 /*[ FONT SIZE ]
 ///////////////////////////////////////////////////////////
