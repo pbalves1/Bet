@@ -32,7 +32,7 @@ li {
 /* Hover Effects on Card */
 
 .limiter {
-  height: 92.5vh;
+  height: auto;
   margin: 0 auto;
   padding: 0 auto;
   background-size: cover;

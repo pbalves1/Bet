@@ -10,12 +10,12 @@
 }
 
 .container{
-  max-width: 100vw; 
+  max-width: 100vw;
   max-height: 92.5vh;
 }
 
 .limiter {
-  height: 92.5vh;
+  height: auto;
   width: 100%;
   margin: 0 auto;
   padding: 0 auto;
