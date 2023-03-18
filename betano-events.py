@@ -24,7 +24,7 @@ def lambda_handler(event, context):
             if 'window["initial_state"]=' in data:
                 self.initialJson = json.loads(data.replace('window["initial_state"]=', ''))
 
-    contents = urllib.request.urlopen("https://br.betano.com/virtuals/futebol").read().decode()
+    contents = urllib.request.urlopen("https://br.betano.com/virtuals/futebol/copa").read().decode()
     parser = MyHTMLParser()
     parser.feed(contents)
 
